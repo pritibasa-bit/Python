@@ -15,4 +15,36 @@ allowing the model to predict outcomes on new, unseen data.
 Supervised learning is a category of machine learning that uses labeled datasets to train algorithms
 to predict outcomes and recognize patterns.
 
-2. Semi Su
+2. Semisupervised Learni
+a machine learning paradigm that bridges the gap between supervised and unsupervised learning by 
+training models on a small amount of labeled data alongside a large volume of unlabeled data.
+This approach is ideal for real-world scenarios where labeling data is expensive, slow, 
+or requires specialized expertise—such as medical image analysis or genetic sequencing—while raw, 
+unlabeled data is abundant and cheap to collect.
+
+3.Unsupervised Lerning
+a machine learning technique that trains algorithms on unlabeled, unstructured data, allowing the model to independently 
+discover hidden patterns, structures, or, patterns.
+a type of machine learning that learns from data without human supervision
+
+4. Reinforcement Learning
+a machine learning approach where an AI agent learns to make decisions by interacting with an environment,
+receiving feedback via rewards or penalties.
+a type of machine learning where an "agent" learns optimal behavior through interaction with its environment.
+
+
+Supervised Learning algorithms are many but these 2 are commonly used
+a. Linear Regression
+b.Logistic regression
+
+Linear Regression- its a continuous value, predict dependent variable vaue based on independent variable.
+It predicts continuous values by fitting a straight line that best represents the data.
+It assumes that there is a linear relationship between the input and output
+Uses a best‑fit line to make predictions
+Commonly used in forecasting, trend analysis, and predictive modelling 
+ y= m*x +c, m and c are learnable weights, 
+y= predicted Value
+x = Input variable
+m= intercept
+c= constant 
+
