@@ -1,0 +1,18 @@
+Machine Learning-
+a subset of artificial intelligence (AI) that develops algorithms to identify patterns in data, 
+enabling computers to make predictions or decisions without explicit programming
+it define and understand patterns behind the data, identify and predict the results.
+
+TYPES OF MODELLING
+1. Supervised Learning
+2. Semisupervised Learning
+3. Unsupervised Learning
+4. Reinforcement Learning
+
+1. Supervised Learning
+a machine learning technique that trains algorithms using labeled datasets to map input data to known outputs, 
+allowing the model to predict outcomes on new, unseen data.
+Supervised learning is a category of machine learning that uses labeled datasets to train algorithms
+to predict outcomes and recognize patterns.
+
+2. Semi Su
