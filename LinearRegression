@@ -25,7 +25,7 @@ unlabeled data is abundant and cheap to collect.
 3.Unsupervised Lerning
 a machine learning technique that trains algorithms on unlabeled, unstructured data, allowing the model to independently 
 discover hidden patterns, structures, or, patterns.
-a type of machine learning that learns from data without human supervision
+a type of machine learning that learns from data without human supervis
 
 4. Reinforcement Learning
 a machine learning approach where an AI agent learns to make decisions by interacting with an environment,
@@ -47,4 +47,150 @@ y= predicted Value
 x = Input variable
 m= intercept
 c= constant 
+
+Concept of OLS- Ordinary Least square or called least squre method
+The Least Square method is a popular mathematical approach used in data fitting, regression analysis, and predictive modeling. 
+It helps find the best-fit line or curve that minimizes the sum of squared differences 
+between the observed data points and the predicted values.
+
+Residual Distance- calculate distance from data points to best fit line
+
+: Find the line of best fit for the following data of heights and weights of students of a school using the Least Squares method:
+
+Height (in centimeters): [160, 162, 164, 166, 168]
+Weight (in kilograms): [52, 55, 57, 60, 61]
+Solution:
+
+Here, we denote Height as x (independent variable) and Weight as y (dependent variable). Now, we calculate the means of x and y values denoted by X and Y respectively.
+
+X = (160 + 162 + 164 + 166 + 168 ) / 5 = 164
+Y = (52 + 55 + 57 + 60 + 61) / 5 = 57
+
+
+x1= 160, 162, 164,166, 168  
+y1= 52, 55, 57, 60, 61
+X- x1= 4, 2, 0, -2, -4
+Y-y1= 5, 2, 0,-3, -4
+(X-x1)*(Y-y1) = 20, 4, 0, 6, 16 sum= 46
+(X-x1)2 = 6, 4, 0, 4, 16  sum = 40
+
+Now, the slope of the line of best fit can be calculated from the formula as follows:
+m = (Σ (X - xi)✕(Y - yi)) / Σ(X - xi)2
+m = 46/40 = 1.15
+
+Now, the intercept will be calculated from the formula as follows:
+c = Y - mX
+c = 57 - 1.15*164 = -131.6
+
+Thus, the equation of the line of best fit becomes, y = 1.15x - 131.6
+
+
+
+Gradient Descent-
+Gradient descent is an iterative optimization algorithm used in machine learning to minimize a cost function by 
+updating model parameters (weights and biases) in the opposite direction of the gradient.
+It calculates the steepest descent to find local minima, allowing models to learn by improving accuracy step-by-step.
+
+How it Works: The algorithm starts with random weights, computes the gradient (slope) of the cost function, 
+and takes small steps in the opposite direction of the gradient until the minimum loss is reached.
+
+Key Components:
+Cost Function: Measures how poorly the model fits the data (e.g., Mean Squared Error).
+Gradient: A vector of partial derivatives indicating the steepest ascent; negative gradient shows the steepest descent.
+Learning Rate: A small scalar that determines the size of the steps taken to reach the minimum.
+
+
+R2 Statistics- provides measure of fit.
+R-squared is one of the key summary metrics produced by linear regression
+R-squared (\(R^{2}\)), or the coefficient of determination, is a statistical measure that represents the 
+proportion of variance in a dependent variable that is explained by the independent variables in a regression model.
+
+Formula- 
+R2= 1-RSS/TSS
+TSS= RSS + ESS
+Tss =total sum of squares
+RSS = Residual sum of squares
+ESS= explained sum of squares
+
+* R-squared, otherwise known as R² typically has a value in the range of 0 through to 1. A value of 1 indicates that 
+predictions are identical to the observed values.
+* R squared value can not be greater than 1.
+* A value of 0 indicates that there is no linear relationship between the observed and predicted values.
+*A value close to 1 means the regression model fits the data well; a value near 0 means it doesn’t.
+* R² is presented as a percentage (e.g., 50%).
+
+Limitations-
+1. Does not account for number of variables
+2. always increases with added variables giving false positive fit
+3. can be used for one model
+
+
+Adjusted R2- when independent variable increases R2 also increase which indicates false positive, to prevent that we 
+use adjusted R2.
+Purpose: It combats the flaw in standard 
+, which artificially increases whenever new predictors are added, regardless of their relevance.
+Formula: The most common formula is:
+Adjusted R2 = 1 - (1-R2) (N-1)\ N-k-1
+r2 =sample R2
+N =  total sample size
+K= number of independent variables
+
+properties-
+1. penalizes for unnecessary variables
+2. Increases only if improvements are significant
+3. Comparing multiple models
+
+Multicollinearity is a regression scenario where two or more independent variables are highly correlated, meaning 
+one can be linearly predicted from the others with high accuracy. It breaks the assumption of independent predictors,
+making it difficult to isolate the individual effect of each variable on the dependent variable. 
+
+Key Implications and Details
+1.Unstable Coefficients: It causes regression coefficients to swing wildly, reducing the precision of estimates.
+2.Interpreting Results: While predictions may remain accurate, the model cannot reliably determine the specific 
+impact of independent variables.
+3.Detection: Common tools to identify it include variance inflation factor (VIF) and checking correlation matrices.
+4.Types: It can be structural (due to model specification) or data-driven (intrinsic to the data).
+5.Solutions: Common techniques to mitigate it include removing variables, increasing sample size,
+or using techniques like Ridge or Lasso regression. 
+
+Common Examples
+Multicollinearity frequently occurs when predictors represent similar information, such as predicting a home's price 
+using both square footage and the number of rooms, or predicting income using both years of education and age.
+
+
+Variance Inflation Factor-
+Interpretation:
+VIF = 1: Not correlated.
+VIF 1–5: Min correlated, but rarely significant.
+VIF > 5: colinearity is high and it is of concern
+VIF > 10 : Highly corelated
+If VIF is  between 1-5 = remove 1 variable
+
+Bias Variance trade off
+Variance- how scattered the data is, degree of fitting
+Bias- Leaning towards specific outcome
+
+Types
+1.Low bias Low variance
+2. Low bias High variance
+3. High Bias Low variance
+4. High bias High variance
+Overfit- if it has high variance and low bias
+underfit - high bias low variance
+
+variance bias tradeoff- Goal is to reduce variance and bias to get an accurate value
+Bias can be reduced by adding more data
+Variance can be reduced by regularization.
+
+
+Regularization
+To handle the variance , helps with decreasing overfitting by restricting degrees of freedom
+
+Lasso Regression- 
+s a regression analysis method that performs both variable selection and regularization to enhance 
+prediction accuracy and model interpretability. By applying a penalty (or ) based on absolute coefficient values
+( regularization), it shrinks less important feature coefficients to exactly zero, eliminating them from the model
+Ridge regression- 
+Elastic Net-
+
 
