@@ -175,8 +175,8 @@ Types
 2. Low bias High variance
 3. High Bias Low variance
 4. High bias High variance
-Overfit- if it has high variance and low bias
-underfit - high bias low variance
+Overfit- if it has high variance and low bias, provides perform well with trained data  and fails with test data 
+underfit - high bias low variance. perform poorly on test and training data ,
 
 variance bias tradeoff- Goal is to reduce variance and bias to get an accurate value
 Bias can be reduced by adding more data
@@ -185,12 +185,15 @@ Variance can be reduced by regularization.
 
 Regularization
 To handle the variance , helps with decreasing overfitting by restricting degrees of freedom
+Regularization is crucial when dealing with limited or noisy data, ensuring the model remains robust and maintains consistent performance across different data subsets
 
-Lasso Regression- 
+1.Lasso Regression- 
 s a regression analysis method that performs both variable selection and regularization to enhance 
 prediction accuracy and model interpretability. By applying a penalty (or ) based on absolute coefficient values
 ( regularization), it shrinks less important feature coefficients to exactly zero, eliminating them from the model
-Ridge regression- 
-Elastic Net-
+2.Ridge regression- 
+3.Elastic Net-
 
+
+Polynomial 
 
