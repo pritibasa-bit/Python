@@ -1,0 +1,56 @@
+Logistic Reggression:
+a supervised machine learning algorithm used for binary classification (predicting 0 or 1, 
+true or false) by modeling the probability of an event occurrence
+How does Logistic Regression work?
+Logistic regression model transforms the linear regression function continuous value output into categorical value 
+output using a sigmoid function which maps any real-valued set of independent variables input into a value between 0 and 1. 
+This function is known as the logistic function.
+
+Key Assumptions
+Binary Outcome: The dependent variable must be dichotomous (e.g., pass/fail, yes/no).
+Independence: Observations should be independent of each other.
+No Multicollinearity: Independent variables should not be too highly correlated.
+Linearity of Independent Variables and Log-Odds: The model assumes a linear relationship between the logit of 
+the outcome and the predictor variables. 
+
+Types of Logistic Regression
+Binary: The response variable has only two possible outcomes (e.g., "spam" or "not spam").
+Multiclass: The dependent variable has three or more unordered categories (e.g., predicting the type of cancer)
+Multilabels : The dependent variable has ordered categories (e.g., rating from 1 to 5)
+
+In this we use same principle of linear regression to get the best fit line, but we don`t need continuos value as the data is 
+categorical, we apply sigmoid function to achieve the value between 0 to 1. From cotinuous to probabilities score.
+
+Understanding Sigmoid Function
+1. The sigmoid function is a important part of logistic regression which is used to convert the raw output of the model 
+into a probability value between 0 and 1.
+
+2. This function takes any real number and maps it into the range 0 to 1 forming an "S" shaped curve called 
+the sigmoid curve or logistic curve. Because probabilities must lie between 0 and 1, the sigmoid function is perfect for this purpose.
+
+3. In logistic regression, we use a threshold value usually 0.5 to decide the class label.
+
+If the sigmoid output is same or above the threshold, the input is classified as Class 1.
+If it is below the threshold, the input is classified as Class 0.
+
+
+The flow chart :
+
+Linear regression formula y= mx+c
+            v
+DEcision boundary line
+            V
+Sigmoid Function
+            V
+probability output( threshold)
+            V
+          Apply Threshold
+             V
+      V                 V
+if >= threshold     if <= Threshold
+ class = 1             class = 0
+                 V
+         cross entrophy loss
+                 V
+      Update weights(learning)
+         
