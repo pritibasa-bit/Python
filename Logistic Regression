@@ -52,5 +52,85 @@ if >= threshold     if <= Threshold
                  V
          cross entrophy loss
                  V
-      Update weights(learning)
+      calculate gradient 
+                 V
+        learning weights
+
+
+Evaluation of classification model- Create Confusiobn Matrix to get the below values
+1. ACCURACY
+2. RECALL
+3. PRECISION 
+4. F1 SCORE
+5. SPECIFICITY 
+6. AUC- ROC CURVE
+
+CONFUSION MATRIX- 
+The confusion matrix is another way to evaluate the performance of a classifier. Here, it counts the number of times
+instances of class A are classified as class B. For example, the number of times the classifier confused images of 5s 
+with non-5s.The confusion matrix is a matrix with four different combinations of predicted and actual classes: 
+True Positive (TP), True Negative (TN), False Positive (FP), and False Negative (FN).
+
+1,Accuracy-
+it gives the % of data is accutate
+formula:( TP + TN) /( TP+TN + FN + FP)* 100
+
+use this website -
+https://www.geeksforgeeks.org/machine-learning/precision-and-recall-in-machine-learning/
+
+
+2. Precision - Too carefull may say NO
+Precision provides the accuracy of the positive prediction made by the classifier. 
+** use precision when cost of  FP is high ( spam detection, where important emails should not be missed0
+Precision = True Positive /  (True Positive + False Positive)
+** A model with high precision is very good at avoiding mistakes when it says “yes.” 
+
+
+3. Recall - Too deligient and may say Yes 
+Recall is the ratio of number of true positive predictions (correctly detected by the classifer) to the t
+otal number of actual positive instances in the dataset. It measures the completeness of positive predictions. 
+** Use recall when cost of FN is high ( cancer detection where you cannot miss a psotive case)
+Recall = True Positve / (True Positive + False Negative)
+** A model with high recall is very good at not missing anything important. It finds almost all the actual “yes” cases in 
+the data
+
+
+4. F1 Score-
+F1 Score is invaluable in binary classification tasks, especially with imbalanced datasets, 
+where accuracy can be misleading. It strikes a balance between precision and recall, crucial in scenarios where both 
+are equally important, like medical diagnosis. This metric effectively captures the trade-off between precision and recall, 
+offering a comprehensive evaluation of model performance.
+
+f1 = 2* (precision X recall)/ (presicion + recall)
+
+The score ranges from 0 to 1, with 1 being a perfect model (perfect precision and recall) and 0 being the worst.
+Range Interpretation: Generally,
+>0.9 is excellent
+0.7–0.9 is good
+0.5–0.7 is okay
+ <0.5 is poor. 
+
+5. Specificity - True Negative rate
+ the ability of a test to correctly identify individuals who do not have a disease (true negatives)
+Formula= TN/ TN+FP
+
+
+6. Sensitivity- Identifying True Positives. 
+formula - TP/ TP + FN
+
+
+ROC curve- 
+he ROC curve is drawn by calculating the true positive rate (TPR) and false positive rate (FPR) at every possible
+threshold (in practice, at selected intervals), then graphing TPR over FPR.
+Y axis- TPR (sensitivity)
+X axis- FPR ( specificity)
+threshold is the point where the curve starts flatlining.
+The ROC curve plots the true positive rate against the false positive rate at various thresholds.
+
+AUC Curve- its used for multiple models 
+Multple ROC curves are ploted and to pick the ROC curve which covers the most area will be the best model.
+
+AUC-ROC measures the area 
+under this curve which provides an aggregate measure of a model's performance across different classification thresholds.
+
          
